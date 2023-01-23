@@ -50,16 +50,13 @@
     ></ais-refinement-list>
     <ais-configure [searchParameters]="{ hitsPerPage: 10 }"></ais-configure>
   </div>
-  <div class="right-panel">
+  <div class="right-panel background-image">
     <ais-hits>
       <ng-template
         let-hits="hits"
         let-insights="insights"
         class="hits-container"
       >
-        <div class="bg-img">
-          <img src="assets\background.jpg" alt="background-image" />
-        </div>
         <ol class="ais-Hits-list">
           <li class="list-items" *ngFor="let hit of hits; let index = index">
             <app-mars-card

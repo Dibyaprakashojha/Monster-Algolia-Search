@@ -47,8 +47,15 @@ export class MarsAlgoliaComponent implements OnInit {
   }
 
   sendUser(hit: any) {
+    console.log({
+      eventName: 'Product Clicked',
+
+      objectIDs: [hit.objectID],
+      userToken: this.loggedInuser,
+    });
     return {
       eventName: 'Product Clicked',
+
       objectIDs: [hit.objectID],
       userToken: this.loggedInuser,
     };
