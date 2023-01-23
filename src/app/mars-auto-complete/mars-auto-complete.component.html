@@ -1,0 +1,14 @@
+<div class="container">
+    <input matInput class="input" [matAutocomplete]="auto" (keyup)="handleChange($event)" you placeholder="Search"
+        style="width: 98.5%; padding: 10px; border-radius: 15px" />
+    <mat-autocomplete #auto="matAutocomplete" style="margin-top: 30px; max-height: 600px">
+        <mat-optgroup *ngFor="let index of state.indices || []">
+            <mat-option *ngFor="let options of index.hits" [value]="options['Asset Name']"
+                (click)="onQuerySuggestionClick.emit({ query: options['Asset Name'] })">
+                <div>
+                    {{ options["Asset Name"] }}
+                </div>
+            </mat-option>
+        </mat-optgroup>
+    </mat-autocomplete>
+</div>

@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+}
+
+
+::ng-deep .input{
+    width:50rem !important;
+    align-self: center;
+    margin-top: 5px;
+  }

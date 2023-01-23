@@ -1,0 +1,235 @@
+.toolbar {
+  background-color: #000000;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+// .light-house-image {
+//   width: 150px;
+//   height: 50px;
+// }
+
+.voice-container {
+  width: 80%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+// .app-mars-auto-complete{
+//   margin-right: 15px;
+//   min-width: 1400px;
+//   flex-grow: 1;
+// }
+
+.ais-voice-search {
+  height: 15px !important;
+  width: 15px !important;
+}
+
+.Username {
+  color: white;
+}
+
+.ais-Pagination {
+  margin-top: 1em;
+}
+
+.left-panel {
+  float: left;
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+h2 {
+  color: #88c534;
+}
+
+ais-refinement-list{
+  color: #88c534;
+}
+
+.right-panel {
+  margin-left: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  
+}
+
+.hit-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.hit-description {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+
+.searchbox {
+  margin-bottom: 2rem;
+  align-self: flex-end;
+  width: 100%;
+}
+
+.hit-link {
+  display: flex;
+  flex-direction: column;
+  // width: 15px;
+}
+
+ais-hits {
+  align-self: flex-start;
+  justify-self: stretch;
+  margin-left: 15px;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.hit-country,
+.hit-description,
+.hit-price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ais-Hits-list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+h1,
+h3 {
+  text-align: center;
+  padding-bottom: 4px;
+  padding-right: 5px;
+}
+
+.pagination {
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+
+.ais-Hits-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  width: 27%;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin: 20px 20px 20px;
+  height: 25%;
+  min-height: 500px;
+  border-width: none !important;
+}
+
+.row-items {
+  display: flex;
+}
+
+.asset-id {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.asset-id-name {
+  margin-right: 15px;
+}
+
+.asset-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+img {
+  width: auto;
+  height: 60px;
+}
+
+.mars-image {
+  height: 200px;
+  width: 250px;
+}
+.mars-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ais-highlight {
+  align-self: center;
+}
+.name-heading {
+  font-weight: 800;
+  flex-grow: 2;
+  width: 50%;
+  text-align: top;
+}
+
+.asset-status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 12px;
+}
+
+.cap1 {
+  height: 200px;
+  width: 90%;
+}
+
+.marvel-image {
+  height: 200px;
+}
+
+h4 {
+  font-size: 15px;
+}
+
+.asset-name {
+  margin-right: 5px;
+  text-align: top;
+}
+
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+.list-items {
+  margin-left: 20px;
+}
+::ng-deep {
+  .ais-CurrentRefinements-item {
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+  .ais-CurrentRefinements-category {
+    margin-left: 15px;
+  }
+}
+
+h2 {
+  margin-top: 3px;
+}

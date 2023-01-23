@@ -1,0 +1,75 @@
+<ais-instantsearch [config]="config">
+  <mat-toolbar class="toolbar">
+    <img src="assets\logo.png" class="monster-energy-image" />
+    <div class="voice-container">
+      <app-mars-auto-complete
+        (onQuerySuggestionClick)="setQuery($event)"
+      ></app-mars-auto-complete>
+      <ais-voice-search [searchAsYouSpeak]="false"></ais-voice-search>
+    </div>
+    <p class="Username">{{ userName | titlecase }}</p>
+  </mat-toolbar>
+  <ais-current-refinements></ais-current-refinements>
+  <ais-configure [searchParameters]="{ clickAnalytics: true }"></ais-configure>
+  <div class="left-panel">
+    <ais-clear-refinements></ais-clear-refinements>
+    <h2>Brand</h2>
+    <ais-refinement-list
+      attribute="Brand"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <h2>Asset Type</h2>
+    <ais-refinement-list
+      attribute="Asset Type"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <h2>Asset Sub Type</h2>
+    <ais-refinement-list
+      attribute="Asset Sub Type"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <h2>Department</h2>
+    <ais-refinement-list
+      attribute="Department"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <h2>Product Line</h2>
+    <ais-refinement-list
+      attribute="Product Line"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <h2>File Type</h2>
+    <ais-refinement-list
+      attribute="File Type"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <h2>Rating</h2>
+    <ais-refinement-list
+      attribute="Rating"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <ais-configure [searchParameters]="{ hitsPerPage: 10 }"></ais-configure>
+  </div>
+  <div class="right-panel">
+    <ais-hits>
+      <ng-template
+        let-hits="hits"
+        let-insights="insights"
+        class="hits-container"
+      >
+        <div class="bg-img">
+          <img src="assets\background.jpg" alt="background-image" />
+        </div>
+        <ol class="ais-Hits-list">
+          <li class="list-items" *ngFor="let hit of hits; let index = index">
+            <app-mars-card
+              (click)="insights('clickedObjectIDsAfterSearch', sendUser(hit))"
+              [hit]="hit"
+            ></app-mars-card>
+          </li>
+        </ol>
+      </ng-template>
+    </ais-hits>
+    <ais-pagination></ais-pagination>
+  </div>
+</ais-instantsearch>

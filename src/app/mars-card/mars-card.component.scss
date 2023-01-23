@@ -1,0 +1,95 @@
+.card {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 450px;
+  margin: 15px;
+}
+.card-img {
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: center;
+  height: 15rem;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+}
+
+.card-img button {
+  height: fit-content;
+  border: none;
+  margin: 1rem;
+}
+
+.label {
+  background: #22c55e;
+  border-radius: 0.2rem;
+  color: #fff;
+}
+
+.save {
+  width: 2rem;
+  height: 2rem !important;
+  border-radius: 2rem;
+  color: #33354d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  height: 1rem;
+}
+
+.card-desc {
+  padding: 1rem;
+  color: #9397ad;
+}
+
+hr {
+  color: #9397ad;
+}
+
+.card-desc-last {
+  padding: 0px 0px 0px 35px;
+  display: flex;
+
+  justify-content: space-between;
+}
+.card-desc-first {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-desc strong {
+  color: #33354d;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #6366f1;
+}
+
+.item-description {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.side-heading {
+  color: #88c534;
+  font-weight: 400;
+  margin: 0;
+}
+.star-container {
+  margin-right: 15px;
+}
+.rating {
+  justify-content: flex-end;
+}
