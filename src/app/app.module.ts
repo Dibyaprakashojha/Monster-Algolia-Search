@@ -5,28 +5,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MarsAlgoliaComponent } from './mars-algolia/mars-algolia.component';
+import { MonsterAlgoliaComponent } from './monster-algolia/monster-algolia.component';
 import { NgAisModule } from 'angular-instantsearch';
-import { MarsCardComponent } from './mars-card/mars-card.component';
-import { MarsModalComponent } from './mars-modal/mars-modal.component';
-import { MarsAutoCompleteComponent } from './mars-auto-complete/mars-auto-complete.component';
+import { MonsterCardComponent } from './monster-card/monster-card.component';
+import { MonsterModalComponent } from './monster-modal/monster-modal.component';
+import { MonsterAutoCompleteComponent } from './monster-auto-complete/monster-auto-complete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MarsAlgoliaComponent,
-    MarsCardComponent,
-    MarsModalComponent,
-    MarsAutoCompleteComponent
+    MonsterAlgoliaComponent,
+    MonsterCardComponent,
+    MonsterModalComponent,
+    MonsterAutoCompleteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     NgAisModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,4 +1,24 @@
-# AlgoliaMars
+# Modifications
+
+In `envConfig.js`, change the `indexName`, `applicationId` and `apiKey` as per the Algolia Dashboard Configuration.
+
+Change the `environment.ts` as per the API keys from the Algolia Dashboard Configuration.
+
+## Build
+
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Deployment in the Server
+
+Copy the build artifacts stored in the `dist/` directory to the server's `webapp/` directory into a new directory.
+
+Change the `index.html`'s base href to the specific name as the directory name.
+
+Change the `proxyPass` and `reverseProxyPass` in the `httpd.conf` file in the `Apache24\config` directory.
+
+Then restart the `Apache services` from the services.
+
+# AlgoliaMonster
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
 
@@ -9,10 +29,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 

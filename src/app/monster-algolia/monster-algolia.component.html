@@ -2,12 +2,12 @@
   <mat-toolbar class="toolbar">
     <img src="assets\logo.png" class="monster-energy-image" />
     <div class="voice-container">
-      <app-mars-auto-complete
+      <app-monster-auto-complete
         (onQuerySuggestionClick)="setQuery($event)"
-      ></app-mars-auto-complete>
+      ></app-monster-auto-complete>
       <ais-voice-search [searchAsYouSpeak]="false"></ais-voice-search>
     </div>
-    <p class="Username">{{ userName | titlecase }}</p>
+    <p class="Username" style="color: #88c534">{{ userName | titlecase }}</p>
   </mat-toolbar>
   <ais-current-refinements></ais-current-refinements>
   <ais-configure [searchParameters]="{ clickAnalytics: true }"></ais-configure>
@@ -16,6 +16,16 @@
     <h2>Brand</h2>
     <ais-refinement-list
       attribute="Brand"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <h2>Product Line</h2>
+    <ais-refinement-list
+      attribute="Product Line"
+      [searchable]="true"
+    ></ais-refinement-list>
+    <h2>Department</h2>
+    <ais-refinement-list
+      attribute="Department"
       [searchable]="true"
     ></ais-refinement-list>
     <h2>Asset Type</h2>
@@ -28,16 +38,6 @@
       attribute="Asset Sub Type"
       [searchable]="true"
     ></ais-refinement-list>
-    <h2>Department</h2>
-    <ais-refinement-list
-      attribute="Department"
-      [searchable]="true"
-    ></ais-refinement-list>
-    <h2>Product Line</h2>
-    <ais-refinement-list
-      attribute="Product Line"
-      [searchable]="true"
-    ></ais-refinement-list>
     <h2>File Type</h2>
     <ais-refinement-list
       attribute="File Type"
@@ -48,7 +48,7 @@
       attribute="Rating"
       [searchable]="true"
     ></ais-refinement-list>
-    <ais-configure [searchParameters]="{ hitsPerPage: 10 }"></ais-configure>
+    <ais-configure [searchParameters]="{ hitsPerPage: 16 }"></ais-configure>
   </div>
   <div class="right-panel background-image">
     <ais-hits>
@@ -59,10 +59,10 @@
       >
         <ol class="ais-Hits-list">
           <li class="list-items" *ngFor="let hit of hits; let index = index">
-            <app-mars-card
+            <app-monster-card
               (click)="insights('clickedObjectIDsAfterSearch', sendUser(hit))"
               [hit]="hit"
-            ></app-mars-card>
+            ></app-monster-card>
           </li>
         </ol>
       </ng-template>

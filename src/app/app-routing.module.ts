@@ -1,18 +1,20 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MarsAlgoliaComponent } from './mars-algolia/mars-algolia.component';
+import { MonsterAlgoliaComponent } from './monster-algolia/monster-algolia.component';
 
 const routes: Routes = [
   {
-    path: '', component: MarsAlgoliaComponent,
+    path: '',
+    component: MonsterAlgoliaComponent,
   },
   {
-    path: 'user', component: MarsAlgoliaComponent,
-  }
+    path: 'monster-algolia/user',
+    component: MonsterAlgoliaComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

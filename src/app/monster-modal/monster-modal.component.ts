@@ -2,11 +2,11 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-mars-modal',
-  templateUrl: './mars-modal.component.html',
-  styleUrls: ['./mars-modal.component.scss'],
+  selector: 'app-monster-modal',
+  templateUrl: './monster-modal.component.html',
+  styleUrls: ['./monster-modal.component.scss'],
 })
-export class MarsModalComponent {
+export class MonsterModalComponent {
   hitData: any;
   imageLink!: string;
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {

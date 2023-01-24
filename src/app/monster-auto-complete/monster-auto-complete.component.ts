@@ -11,11 +11,11 @@ import type {
 import { connectAutocomplete } from 'instantsearch.js/es/connectors';
 
 @Component({
-  selector: 'app-mars-auto-complete',
-  templateUrl: './mars-auto-complete.component.html',
-  styleUrls: ['./mars-auto-complete.component.scss']
+  selector: 'app-monster-auto-complete',
+  templateUrl: './monster-auto-complete.component.html',
+  styleUrls: ['./monster-auto-complete.component.scss']
 })
-export class MarsAutoCompleteComponent extends  TypedBaseWidget<
+export class MonsterAutoCompleteComponent extends  TypedBaseWidget<
 AutocompleteWidgetDescription,
 AutocompleteConnectorParams
   > {

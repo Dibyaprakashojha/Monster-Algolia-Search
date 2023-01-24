@@ -9,14 +9,14 @@ import {
   twix,
   mars,
 } from 'src/assets/imageUrl';
-import { MarsModalComponent } from '../mars-modal/mars-modal.component';
+import { MonsterModalComponent } from '../monster-modal/monster-modal.component';
 
 @Component({
-  selector: 'app-mars-card',
-  templateUrl: './mars-card.component.html',
-  styleUrls: ['./mars-card.component.scss'],
+  selector: 'app-monster-card',
+  templateUrl: './monster-card.component.html',
+  styleUrls: ['./monster-card.component.scss'],
 })
-export class MarsCardComponent implements OnInit {
+export class MonsterCardComponent implements OnInit {
   @Input() hit: any;
   imageLink: string = '';
   constructor(public dialog: MatDialog) {}
@@ -27,7 +27,7 @@ export class MarsCardComponent implements OnInit {
   }
 
   openDialog() {
-    this.dialog.open(MarsModalComponent, {
+    this.dialog.open(MonsterModalComponent, {
       width: '700px',
       height: 'auto',
       data: {

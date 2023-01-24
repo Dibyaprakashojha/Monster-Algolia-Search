@@ -15,11 +15,11 @@ const searchClient = algoliasearch(
 );
 
 @Component({
-  selector: 'app-mars-algolia',
-  templateUrl: './mars-algolia.component.html',
-  styleUrls: ['./mars-algolia.component.scss'],
+  selector: 'app-monster-algolia',
+  templateUrl: './monster-algolia.component.html',
+  styleUrls: ['./monster-algolia.component.scss'],
 })
-export class MarsAlgoliaComponent implements OnInit {
+export class MonsterAlgoliaComponent implements OnInit {
   userName = '';
   loggedInuser = '';
   userToken = {};
@@ -40,7 +40,7 @@ export class MarsAlgoliaComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params) => {
-      this.loggedInuser = params['username'];
+      this.loggedInuser = params['userId'];
     });
     this.userName =
       this.loggedInuser === 'ben' ? 'Ben Williams' : 'Carlos Juan';
@@ -49,7 +49,6 @@ export class MarsAlgoliaComponent implements OnInit {
   sendUser(hit: any) {
     console.log({
       eventName: 'Product Clicked',
-
       objectIDs: [hit.objectID],
       userToken: this.loggedInuser,
     });

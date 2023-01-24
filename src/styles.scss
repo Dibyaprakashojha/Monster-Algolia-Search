@@ -11,9 +11,23 @@ body {
 }
 
 .background-image {
-  background-image: url("/assets/background.jpg");
+  background-image: url("./assets/background.jpg");
 }
 
 .checked {
   color: #c6ac3b;
 }
+// ::ng-deep {
+ais-voice-search.ais-VoiceSearch {
+  .ais-VoiceSearch {
+    .ais-VoiceSearch-status {
+      p {
+        color: white !important;
+      }
+    }
+    .ng-star-inserted {
+      color: white !important;
+    }
+  }
+}
+// }
